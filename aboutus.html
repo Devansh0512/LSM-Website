@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <title>ARC Studios</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+
+        footer a{
+            color: teal;
+        }
+
+        .team-list img {
+        width: 50%;
+        }
+
+        .team-list .content {
+        width: 50%;
+        }
+
+        .team-list .content .follow {
+        position: absolute;
+        bottom: 24px;
+        }
+
+        .team-list:hover {
+        -webkit-transform: scale(1.05);
+                transform: scale(1.05);
+        }
+
+        .team, .team-list {
+        -webkit-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s;
+        transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s;
+        }
+
+        .team .content .title, .team-list .content .title {
+        font-size: 18px;
+        }
+
+        .team .overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: 0;
+        -webkit-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+        }
+
+        .team .member-position, .team .team-social {
+        position: absolute;
+        bottom: -35px;
+        right: 0;
+        left: 0;
+        margin: auto 10%;
+        z-index: 99;
+        }
+
+        .team .team-social {
+        bottom: 40px;
+        opacity: 0;
+        -webkit-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s;
+        transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s;
+        }
+
+        .team:hover {
+        -webkit-transform: translateY(-7px);
+                transform: translateY(-7px);
+        -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+                box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+        }
+
+        .team:hover .overlay {
+        opacity: 0.6;
+        }
+
+        .team:hover .team-social {
+        opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+        .team-list img,
+        .team-list .content {
+            width: 100%;
+            float: none !important;
+        }
+        .team-list img .follow,
+        .team-list .content .follow {
+            position: relative;
+            bottom: 0;
+        }
+        }
+
+        .social-icon.social li a {
+            color: #adb5bd;
+            border-color: #adb5bd;
+        }
+        .social-icon li a {
+            color: #35404e;
+            border: 1px solid #35404e;
+            display: inline-block;
+            height: 32px;
+            text-align: center;
+            font-size: 15px;
+            width: 32px;
+            line-height: 30px;
+            -webkit-transition: all 0.4s ease;
+            transition: all 0.4s ease;
+            overflow: hidden;
+            position: relative;
+        }
+        .rounded {
+            border-radius: 5px !important;
+        }
+
+        .para-desc {
+            max-width: 600px;
+        }
+        .text-muted {
+            color: #8492a6 !important;
+        }
+
+        .section-title .title {
+            letter-spacing: 0.5px;
+            font-size: 30px;
+        }
+
+        .team-list img {
+        width: 50%;
+        }
+
+        .team-list .content {
+        width: 50%;
+        }
+
+        .team-list .content .follow {
+        position: absolute;
+        bottom: 24px;
+        }
+
+        .team-list:hover {
+        -webkit-transform: scale(1.05);
+                transform: scale(1.05);
+        }
+
+        .team, .team-list {
+        -webkit-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s;
+        transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s;
+        }
+
+        .team .content .title, .team-list .content .title {
+        font-size: 18px;
+        }
+
+        .team .overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: 0;
+        -webkit-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+        }
+
+        .team .member-position, .team .team-social {
+        position: absolute;
+        bottom: -35px;
+        right: 0;
+        left: 0;
+        margin: auto 10%;
+        z-index: 99;
+        }
+
+        .team .team-social {
+        bottom: 40px;
+        opacity: 0;
+        -webkit-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s;
+        transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0s;
+        }
+
+        .team:hover {
+        -webkit-transform: translateY(-7px);
+                transform: translateY(-7px);
+        -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+                box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+        }
+
+        .team:hover .overlay {
+        opacity: 0.6;
+        }
+
+        .team:hover .team-social {
+        opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+        .team-list img,
+        .team-list .content {
+            width: 100%;
+            float: none !important;
+        }
+        .team-list img .follow,
+        .team-list .content .follow {
+            position: relative;
+            bottom: 0;
+        }
+        }
+
+        .social-icon.social li a {
+            color: #adb5bd;
+            border-color: #adb5bd;
+        }
+        .social-icon li a {
+            color: #35404e;
+            border: 1px solid #35404e;
+            display: inline-block;
+            height: 32px;
+            text-align: center;
+            font-size: 15px;
+            width: 32px;
+            line-height: 30px;
+            -webkit-transition: all 0.4s ease;
+            transition: all 0.4s ease;
+            overflow: hidden;
+            position: relative;
+        }
+        .rounded {
+            border-radius: 5px !important;
+        }
+
+        .para-desc {
+            max-width: 600px;
+        }
+        .text-muted {
+            color: #8492a6 !important;
+        }
+
+        .section-title .title {
+            letter-spacing: 0.5px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="content">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+            <a class="navbar-brand" href="#">
+                <img class="rounded-circle" src="images/logo3.png" width="65" height="65" class="d-inline-block align-top" alt="" loading="lazy">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item font-weight-bold mr-3">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item font-weight-bold mr-3">
+                        <a class="nav-link" href="games.html">Games <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item font-weight-bold mr-3">
+                        <a class="nav-link active" href="#" >About Us <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item font-weight-bold mr-3">
+                        <a class="nav-link" href="contactus.html">Contact <span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="jumbotron jumbotron-fluid text-center p-5">
+            <div class="container">
+                <img class="animate__animated animate__zoomIn animate__slow rounded" src="images/logo3.png" width="200" alt="logo"
+                    loading="lazy">
+                <h1 class="jumbotron-heading animate__animated animate__zoomIn animate__slower">ARC Studios</h1>
+                <p class="lead animate__animated animate__flipInX animate__slower text-left">
+                    We aim to start a game development studio in which we will be developing and publishing some arcade games. We will also be developing a website that will consist of all our developed games and the games will be monitored and updated regularly according to the customer needs and the technological growth. Currently our gaming studio will work on a small scale,but in the future, seeing the trends and revenue generation for our studio we will develop more games. As and when our enterprise grows and becomes more recognized, we aim to spread our reach all over the world.
+                    We have created the first few games for kick starting our gaming studio. The games are designed for Windows and android operating systems.
+                    With games that could be freely downloaded through PCs on the web, just like any other piece of software, the free-to-play model has become widely popular among digital games.
+                </p>
+            </div>
+        </div>
+    </section>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.3.45/css/materialdesignicons.css" integrity="sha256-NAxhqDvtY0l4xn+YVa6WjAcmd94NNfttjNsDmNatFVc=" crossorigin="anonymous" />
+    <div class="container bootdey">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <div class="section-title mb-4 pb-2">
+                        <h4 class="title mb-4">Our Team Members</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2 col-md-6 col-12">
+                    <div class="team text-center rounded p-3 py-4">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar7.png" class="img-fluid avatar avatar-medium shadow rounded-pill" alt="">
+                        <div class="content mt-3">
+                            <h4 class="title mb-0">Devansh Mehra</h4>
+                            <small class="text-muted">19BCE1176</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 col-12">
+                    <div class="team text-center rounded p-3 py-4">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar6.png" class="img-fluid avatar avatar-medium shadow rounded-pill" alt="">
+                        <div class="content mt-3">
+                            <h4 class="title mb-0">Harsh Vaswani</h4>
+                            <small class="text-muted">19BCE1254</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 col-12">
+                    <div class="team text-center rounded p-3 py-4">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar7.png" class="img-fluid avatar avatar-medium shadow rounded-pill" alt="">
+                        <div class="content mt-3">
+                            <h4 class="title mb-0">Sona Shubham Vats</h4>
+                            <small class="text-muted">19BCE1245</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 col-12">
+                    <div class="team text-center rounded p-3 py-4">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar2.png" class="img-fluid avatar avatar-medium shadow rounded-pill" alt="">
+                        <div class="content mt-3">
+                            <h4 class="title mb-0">R V Srujan</h4>
+                            <small class="text-muted">19BCE1233</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 col-12">
+                    <div class="team text-center rounded p-3 py-4">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar6.png" class="img-fluid avatar avatar-medium shadow rounded-pill" alt="">
+                        <div class="content mt-3">
+                            <h4 class="title mb-0">Sagar Gupta</h4>
+                            <small class="text-muted">19BCE1054</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 col-12">
+                    <div class="team text-center rounded p-3 py-4">
+                        <img src="https://bootdey.com/img/Content/avatar/avatar2.png" class="img-fluid avatar avatar-medium shadow rounded-pill" alt="">
+                        <div class="content mt-3">
+                            <h4 class="title mb-0">Rahul Choudhary</h4>
+                            <small class="text-muted">19BCE1870</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <!-- <section class="content">
+        <div class="container">
+            <div class="card mb-3">
+            Team Members
+
+            Sagar Gupta                     19BCE1054
+            Devansh Mehra                  19BCE1176
+            R V Srujan                      19BCE1233
+            Sona Shubham Vats              19BCE1245
+            Harsh Vaswani                   19BCE1254
+            Rahul Choudhary               19BCE1870
+        </div>
+    </section> -->
+    <footer class="container-fluid bg-dark my-0 py-3 text-light">
+        <p class="mb-0 text-center">© Rights Reserverd ARC Studios </p>
+        <p class="mb-0 text-center">Made By DHSR</p>
+        <p class="mb-0 text-center">
+            <a href="#">Back to top |</a>
+            <a href="#">Privacy |</a>
+            <a href="#">Terms</a>
+        </p>
+    </footer>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: jQuery, Popper.js, and Bootstrap JS
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
